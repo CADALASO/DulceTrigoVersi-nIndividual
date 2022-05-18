@@ -9,11 +9,10 @@ function Navbar(){
             <label for="chk-menu" class="btn-menu">
                 <i class="fa-solid fa-bars"></i>
             </label>
-
             <div class="items">
                 <a href="" class="item">Acerca de</a>
                 <hr class="line-nav" />
-                <a href="" class="item">Productos personalizados</a>
+                    <a href="" class="item">Productos personalizados</a>
                 <hr class="line-nav" />
                 <a href="" class="item">Contacto</a>
             </div>

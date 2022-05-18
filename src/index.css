@@ -1,28 +1,31 @@
-@font-face{
+@font-face {
   font-family: 'nesans';
-  src: url(../src/fonts/Nesans\ Semi\ Bold.ttf);
+  src: url(assets/fonts/Nesans\ Semi\ Bold.ttf);
   font-family: 'breadley';
-  src: url(../src/fonts/BreadleySans-Regular.ttf);
+  src: url(assets/fonts/BreadleySans-Regular.ttf);
   font-family: 'delius';
-  src: url(../src/fonts/Delius-Regular.ttf);
+  src: url(assets/fonts/Delius-Regular.ttf);
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
-:root{
+
+:root {
   --red-wine: #731627;
   --pink-stick: #D9B1AD;
   --white: #F6F5EE;
-  --dark-beige:#BF9775;
+  --dark-beige: #BF9775;
   --golden: #AF8738;
   --cream: #F0ECDE;
-  --black-rose:#2B0D16;
-  --light-red-wine: rgba(141,22,65,40%);
+  --black-rose: #2B0D16;
+  --light-red-wine: rgba(141, 22, 65, 40%);
   --beby-pink: #FACCC7;
 }
-body{
+
+body {
   font-size: 16px;
 }
