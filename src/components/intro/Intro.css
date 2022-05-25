@@ -1,0 +1,39 @@
+#container-text {
+    padding: 30px 30px 0 30px;
+}
+
+h2 {
+    font-family: 'breadley';
+    color: var(--red-wine);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'breadley';
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/*Resolucion tablet*/
+@media screen and (min-width:768px) {
+
+    h2 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 26px;
+    }
+
+}
+
+/*Resolucion medias*/
+@media screen and (min-width:1024px) {
+
+    h2 {
+        font-size: 46px;
+    }
+
+}

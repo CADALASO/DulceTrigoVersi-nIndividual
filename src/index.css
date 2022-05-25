@@ -1,8 +1,14 @@
 @font-face {
   font-family: 'nesans';
   src: url(assets/fonts/Nesans\ Semi\ Bold.ttf);
+}
+
+@font-face {
   font-family: 'breadley';
   src: url(assets/fonts/BreadleySans-Regular.ttf);
+}
+
+@font-face {
   font-family: 'delius';
   src: url(assets/fonts/Delius-Regular.ttf);
 }

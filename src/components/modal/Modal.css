@@ -1,0 +1,146 @@
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.441);
+    display: flex;
+    --opacity: 0;
+    --pointer: none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity 0.5s;
+}
+
+.modal:target {
+    --opacity: 1;
+    --pointer: unset;
+}
+
+.modalContainer {
+    margin: auto;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 98%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+.modalContainer h2 {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.modal:target .modalContainer {
+    animation: show 1s 0.5s backwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(-150vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modalPicture {
+    font-size: 50px;
+    margin: -30px auto;
+    color: var(--red-wine);
+}
+
+.modal:target .modalPicture {
+    animation: scale 0.5s 1s backwards;
+    /*Trae las propiades del elemento o clase que estoy llamando y a su vez conservar las nuevas que le estoy asignando*/
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+}
+
+#form {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#form label {
+    font-family: 'delius';
+    text-align: start;
+    margin: 5px 0;
+}
+
+#form input {
+    background-color: var(--pink-stick);
+    border: 0.1px solid var(--red-wine);
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+#form input::placeholder {
+    font-family: 'delius';
+}
+
+#form textarea {
+    font-family: 'delius';
+    background-color: var(--pink-stick);
+    border: 0.1px solid var(--red-wine);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 0 0 10px;
+}
+
+.btn-send {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--red-wine);
+    border: 1px solid var(--red-wine);
+    border-radius: 30px;
+    font-family: 'delius';
+    font-weight: bolder;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalP {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bolder;
+}
+
+@media (max-width:600px) {
+    .modalTitle {
+        font-size: 9px;
+    }
+}
+
+/*Resolucion macro*/
+@media screen and (min-width:1200px) {
+
+    .modalContainer {
+        height: 100%;
+    }
+
+    .modalP {
+        margin: -20px 0 5px 0;
+    }
+
+    .btn-send {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+
+}
