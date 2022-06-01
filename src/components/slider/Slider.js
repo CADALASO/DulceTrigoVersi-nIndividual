@@ -1,9 +1,9 @@
 import React from 'react';
 import './Slider.css';
-import Aniversarios from '../../assets/img/Aniversarios.jpg'
-import Fiestas from '../../assets/img/Fiestas-Infantiles.jpg'
-import Ocasion from '../../assets/img/Para-Toda-Ocasion.jpg'
-import { Link } from 'react-router-dom';
+import Modal from "../modal/Modal";
+import Aniversarios from '../../assets/img/Aniversarios.jpg';
+import Fiestas from '../../assets/img/Fiestas-Infantiles.jpg';
+import Ocasion from '../../assets/img/Para-Toda-Ocasion.jpg';
 
 function Slider() {
     return (
@@ -25,8 +25,11 @@ function Slider() {
                 </ul>
             </section>
             <div className="button">
-                <Link to="" className="btn-order">!Haz tu pedido aqui!</Link>
+                <button type="button" class="btn-order" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                !Haz tu pedido aqui!
+                </button>
             </div>
+            <Modal />
         </div>
     );
 }
