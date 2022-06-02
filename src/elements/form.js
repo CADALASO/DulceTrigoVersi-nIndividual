@@ -18,6 +18,7 @@ flex-direction: column;
 const Label = styled.label`
 color: ${colores.error};
 font-family: 'delius';
+font-weight:bold;
 text-align: start;
 margin:5px 0;
 
@@ -41,10 +42,7 @@ width: 100%;
     border-radius: 5px;
     margin-bottom: 2px;
 	border: 3px solid transparent;
-
-    &::placeholder{
-        font-family: 'delius';
-    }
+	font-family: 'delius';
 
 	&:focus {
 		border: 3px solid ${colores.borde};
@@ -54,11 +52,13 @@ width: 100%;
 
 	${props => props.valido === 'true' && css`
 		border: 3px solid transparent;
+		
 	`}
 
 	${props => props.valido === 'false' && css`
 		border: 3px solid ${colores.error} !important;
 	`}
+	
 `;
 const TextTarea = styled.textarea`
 font-family: 'delius';
@@ -74,11 +74,15 @@ padding: 10px 0 0 10px;
 }
 
 `;
+
 const LeyendaError = styled.p`
 	font-size: 12px;
 	margin-bottom: 0;
 	color: ${colores.error};
 	display: none;
+	font-family: 'delius';
+	font-weight:bold;
+
 
 	${props => props.valido === 'true' && css`
 		display: none;
@@ -92,9 +96,9 @@ const LeyendaError = styled.p`
 const IconoValidacion = styled(FontAwesomeIcon)`
 	position: absolute;
 	right: 10px;
-	bottom: 14px;
+	bottom: 16px;
 	z-index: 100;
-	font-size: 10px;
+	font-size: 16px;
 	opacity: 0;
 
 	${props => props.valido === 'false' && css`
@@ -125,7 +129,7 @@ const ContenedorBotonCentrado = styled.div`
 	flex-direction: column;
 	align-items: center;
 	grid-column: span 2;
-
+	margin: 0.5rem 0;
 	@media (max-width: 800px){
 		grid-column: span 1;
 	}
@@ -149,20 +153,26 @@ padding: 10px 30px;
 `;
 
 const MensajeExito = styled.p`
-	font-size: 14px;
-	color: ${colores.exito};
+	font-size: 16px;
+	color: ${colores.error};
+	font-family: 'delius';
+    font-weight: bold;
+	margin:0.5rem 0;
+
 `;
 
 const MensajeError = styled.div`
 	height: 30px;
-	font-size: 14px;
-	line-height: 30px;
+	line-height: 20px;
 	background: #731627;
     color:#f6f5ee;
-	padding: 0px 15px;
+	padding: 5px 15px;
 	border-radius: 3px;
 	p {
 		margin: 0;
+		font-size: 14px;
+		font-family: 'delius';
+
 	} 
 	b {
 		margin-left: 10px;
@@ -181,5 +191,5 @@ export {
     Boton,
     MensajeExito,
     MensajeError,
-    TextTarea
+    TextTarea,
 };

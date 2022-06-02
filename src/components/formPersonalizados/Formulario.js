@@ -12,12 +12,15 @@ const Form = () => {
     const [telefono, cambiarTelefono] = useState({ campo: '', valido: null });
     const [terminos, cambiarTerminos] = useState(false);
     const [formularioValido, cambiarFormularioValido] = useState(null);
+    const [textTarea, cambiarTextTarea] = useState(null);
+
 
     const expresiones = {
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
         correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-        cantidad: /^\d{1,5}$/ // 1 a 5 numeros.
+        cantidad: /^\d{1,5}$/, // 1 a 5 numeros.
+        fecha: /^([012][1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/
 
     }
 
@@ -60,7 +63,6 @@ const Form = () => {
                     cambiarEstado={cambiarNombre}
                     tipo="text"
                     label="Nombre"
-                    placeholder="John Doe"
                     name="usuario"
                     leyendaError="El nombre solo puede contener letras y espacios."
                     expresionRegular={expresiones.nombre}
@@ -86,10 +88,12 @@ const Form = () => {
                 <Input
                     estado={fecha}
                     cambiarEstado={cambiarFecha}
-                    tipo="date"
+                    tipo="text"
                     label="Fecha de entrega"
                     name="fecha"
-                    leyendaError="Ingrese la fecha de entrega"
+                    leyendaError="Ingrese la fecha de entrega dd/mm/aaaa"
+                    expresionRegular={expresiones.fecha}
+
                 />
                 <Input
                     estado={cantidad}
@@ -101,7 +105,12 @@ const Form = () => {
                     expresionRegular={expresiones.cantidad}
                 />
                 <Label for="textarea">¿Qué Producto Requiere?</Label>
-                <TextTarea name="textarea" rows="5" cols="50"></TextTarea>
+                <TextTarea 
+                name="textarea" 
+                rows="5" 
+                cols="50"
+                estado={textTarea}
+                cambiarEstado={cambiarTextTarea}></TextTarea>
 
 
 
@@ -120,11 +129,11 @@ const Form = () => {
                 {formularioValido === false && <MensajeError>
                     <p>
                         <FontAwesomeIcon icon={faExclamationTriangle} />
-                        <b>Error:</b>Por favor diligenciar el formulario correctamente</p>
+                        <b>Error: </b> Por favor diligenciar el formulario correctamente</p>
                 </MensajeError>}
                 <ContenedorBotonCentrado>
                     <Boton type="submit">Enviar</Boton>
-                    {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+                    {formularioValido === true && <MensajeExito>Muchas gracias, en un momento nos contactaremos.</MensajeExito>}
                 </ContenedorBotonCentrado>
 
             </Formulario>
