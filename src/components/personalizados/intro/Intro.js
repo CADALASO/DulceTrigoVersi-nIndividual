@@ -3,7 +3,7 @@ import './Intro.css';
 function Intro() {
     return (
         <section id="container-text">
-        <h2>Productos Personalizados.</h2>
+        <h2 className="title">Productos Personalizados.</h2>
         <p>Dulce trigo ha trabajado todo tipo de pedidos y regalos corporativos. También en detalles personalizados que
             marcan la diferencia en ese día especial.
             Pueden pedir una gran variedad de productos tanto para comida de sal como de dulce, panes especiales,

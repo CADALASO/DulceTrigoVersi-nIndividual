@@ -49,6 +49,10 @@ width: 100%;
 		outline: none;
 		box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 	}
+	&::placeholder {
+		font-family: 'delius';
+
+	}
 
 	${props => props.valido === 'true' && css`
 		border: 3px solid transparent;
@@ -65,12 +69,16 @@ font-family: 'delius';
 background-color: var(--pink-stick);
 border: 3px solid transparent;
 border-radius: 5px;
-margin-bottom: 20px;
+margin: 20px 0;
 padding: 10px 0 0 10px;
 &:focus {
     border: 3px solid ${colores.borde};
     outline: none;
     box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+&::placeholder {
+    font-family: 'delius';
+
 }
 
 `;
@@ -154,6 +162,7 @@ padding: 10px 30px;
 
 const MensajeExito = styled.p`
 	font-size: 16px;
+	text-align:center;
 	color: ${colores.error};
 	font-family: 'delius';
     font-weight: bold;
@@ -168,11 +177,10 @@ const MensajeError = styled.div`
     color:#f6f5ee;
 	padding: 5px 15px;
 	border-radius: 3px;
-	p {
+	.prueba {
 		margin: 0;
 		font-size: 14px;
 		font-family: 'delius';
-
 	} 
 	b {
 		margin-left: 10px;

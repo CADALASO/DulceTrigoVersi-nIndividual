@@ -50,7 +50,7 @@
     margin-top: 3%;
 }
 
-.buttons-container input {
+.icon-search {
     border-radius: 30px;
     background-color: var(--pink-stick);
     border: 0.5px solid var(--red-wine);
@@ -58,12 +58,19 @@
     width: 150px;
     height: 40px;
     margin-top: 8px;
-    text-align: end;
+    padding-left: 1rem;
+    font-family: 'delius';
+    font-weight: bold;
+}
+.icon-search:focus{
+    outline: none;
 }
 
-.buttons-container input::placeholder {
-    color: var(--black-rose);
-    font-size: 20px;
+.icon-search::placeholder{
+    background-image: url(../../assets/img/magnifying-glass-solid.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 @media screen and (min-width:768px) {
@@ -96,15 +103,17 @@
         width: 420px;
     }
 
-    .shop,
-    .buttons-container input::placeholder {
+    .shop {
         font-size: 25px;
     }
-
-    .buttons-container input {
+    .icon-search {
         height: 45px;
         width: 180px;
-        padding: 5px 0 0 0;
+        font-size: 20px;
+    }
+    .icon-search::placeholder{
+        background-size: 25px;
+        background-position: right 0rem;
     }
 
     .header-title {
@@ -117,15 +126,8 @@
         width: 550px;
     }
 
-    .shop,
-    .buttons-container input::placeholder {
+    .shop {
         font-size: 30px;
-    }
-
-    .buttons-container input {
-        height: 50px;
-        width: 200px;
-        padding: 10px 0 0 0;
     }
 
     .header-title {
@@ -136,9 +138,12 @@
         display: flex;
         margin-top: 3%;
     }
-
-    .buttons-container input {
+    .icon-search {
         height: 50px;
-        width: 180px;
+        width: 200px;
+        font-size: 24px;
+    }
+    .icon-search::placeholder{
+        background-size: 30px;
     }
 }

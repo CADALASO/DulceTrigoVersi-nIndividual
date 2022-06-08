@@ -5,7 +5,7 @@ import Line from '../../assets/img/Line.png'
 function acercade() {
     return (
         <section className="acercade-container">
-        <h2>Acerca de...</h2>
+        <h2 className='title'>Acerca de...</h2>
         <div className="container-collage">
             <p>Somos una empresa enfocada en realizar productos de panadería y pastelería, donde queremos dar a nuestros
                 clientes productos no solo de excelente calidad sino también novedosos; combinaciones diferentes que le

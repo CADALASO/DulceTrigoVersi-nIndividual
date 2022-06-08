@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, TextTarea } from '../../elements/form'
+import { Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError, TextTarea } from '../../../elements/form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import Input from '../formPersonalizados/Input';
+import Input from './Input';
 
 const Form = () => {
     const [fecha, cambiarFecha] = useState({ campo: '', valido: null });
@@ -127,7 +127,7 @@ const Form = () => {
                     </Label>
                 </ContenedorTerminos>
                 {formularioValido === false && <MensajeError>
-                    <p>
+                    <p className='prueba'>
                         <FontAwesomeIcon icon={faExclamationTriangle} />
                         <b>Error: </b> Por favor diligenciar el formulario correctamente</p>
                 </MensajeError>}

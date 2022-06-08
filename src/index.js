@@ -2,9 +2,9 @@ import React from 'react';
 import './index.css';
 import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
-import Acercade from './pages/acercade/Acercade';
-import Contacto from './pages/Contacto/Contacto';
-import Personalizados from './pages/personalizados/Personalizados';
+import Acercade from './pages/Acercade';
+import Contacto from './pages/Contacto';
+import Personalizados from './pages/Personalizados';
 import {
   Route,
   Navigate,

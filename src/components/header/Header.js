@@ -10,7 +10,7 @@ function Header() {
             <div class="button-header">
                 <h3 class="header-title">“Traemos el dulce sabor que le hace falta a tu vida”</h3>
                 <div class="buttons-container">
-                    <input type="search" id="search" name="search" placeholder=" &#xf002;" />
+                    <input type="search" id="search" className='icon-search' name="search" placeholder=" " />
                     <a href="src/pages/compras.html">
                         <button type="submit">
                             <i class="fa-solid fa-cart-shopping shop"></i>

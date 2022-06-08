@@ -1,8 +1,8 @@
 import React from 'react';
-import {Input,Label,GrupoInput,LeyendaError,IconoValidacion} from '../../elements/form';
+import {Input,Label,GrupoInput,LeyendaError,IconoValidacion} from '../../../elements/form';
 import { faCheckCircle,faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 
-const ComponenteInput=({estado,cambiarEstado,tipo,label,name,leyendaError,expresionRegular,funcion})=>{
+const ComponenteInput=({estado,cambiarEstado,tipo,label,name,placeholder,leyendaError,expresionRegular,funcion})=>{
 
 const onChange =(e)=>{
     cambiarEstado({...estado,campo:e.target.value})
@@ -21,12 +21,13 @@ funcion();
 }
 }
     return(
-    <div>  
+    <div className='prueba'>  
         <Label htmlFor={name} valido={estado.valido}>{label}</Label>
         <GrupoInput>
         <Input 
         type={tipo} 
         id="nombre"
+        placeholder={placeholder}
         value={estado.campo}
         onChange={onChange}
         onKeyUp={validacion}

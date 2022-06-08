@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-h2 {
+.title {
     font-family: 'breadley';
     color: var(--red-wine);
     font-size: 30px;
@@ -37,7 +37,7 @@ p {
 }
 
 @media screen and (min-width:768px) {
-    h2 {
+    .title {
         font-size: 38px;
     }
 
@@ -52,7 +52,7 @@ p {
 
 @media screen and (min-width:1024px) {
 
-    h2 {
+    .title {
         font-size: 46px;
     }
 

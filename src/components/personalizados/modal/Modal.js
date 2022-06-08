@@ -1,5 +1,5 @@
 import Form from "../formPersonalizados/Formulario";
-import '../modal/Modal.css'
+import './Modal.css'
 
 function Modal() {
     return (

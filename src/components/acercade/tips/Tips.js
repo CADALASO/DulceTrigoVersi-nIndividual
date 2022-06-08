@@ -1,14 +1,14 @@
 import React from 'react';
 import './Tips.css';
-import matequilla from '../../assets/img/Mantequilla-Acercade.png';
-import ingredientes from '../../assets/img/Ingredientes-Acercade.png'
-import batir from '../../assets/img/Batir-Acercade.png';
-import sal from '../../assets/img/Sal-Acercade.png'
-import horno from '../../assets/img/Horno-Acercade.png';
+import matequilla from '../../../assets/img/Mantequilla-Acercade.png';
+import ingredientes from '../../../assets/img/Ingredientes-Acercade.png'
+import batir from '../../../assets/img/Batir-Acercade.png';
+import sal from '../../../assets/img/Sal-Acercade.png'
+import horno from '../../../assets/img/Horno-Acercade.png';
 function acercade() {
     return (
         <section id="tips-container">
-        <h2>Algunos Tips...</h2>
+        <h2 className="title">Algunos Tips...</h2>
         <div class="tips">
             <div class="width">
                 <div class="first-card">
