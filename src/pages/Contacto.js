@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer";
 import Banner from "../components/contacto/banner/Banner";
 import FormContacto from "../components/contacto/formContacto/FormContacto";
 import Contactos from "../components/contacto/contactos/Contacto";
+import Whatsapp from "../components/Whatsapp/Whatsapp"
 import '../components/contacto/contactos/Contacto.css';
 
 import LineVertical from "../assets/img/Line-vertical.png"
@@ -18,6 +19,7 @@ function Contacto() {
             <img src={LineVertical} alt="line vertical" class="line-vertical"/>
             <Contactos/>
             </div>
+            <Whatsapp/>
             <Footer />
         </div>
     )
